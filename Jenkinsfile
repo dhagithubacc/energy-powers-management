@@ -13,7 +13,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git branch: 'main', url: 'https://github.com/cts-karthikvelou/energy-asset-management/'
+        git branch: 'main', url: 'https://github.com/dhagithubacc/energy-powers-management/'
       }
     }
 
@@ -90,7 +90,7 @@ pipeline {
               sh """
                 bash -lc "${NODE20_PREFIX} \
                 \\"${scannerHome}/bin/sonar-scanner\\" \
-                  -Dsonar.projectKey=energy-asset-management \
+                  -Dsonar.projectKey=energy-powers-management \
                   -Dsonar.sources=. \
                   -Dsonar.host.url=\\"${env.SONAR_HOST_URL}\\" \
                   -Dsonar.login=\\"${SQ_TOKEN}\\" \
